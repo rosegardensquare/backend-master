@@ -1,0 +1,23 @@
+server:
+  port: 8086
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://123.57.29.77:3306/backend?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.entity
+
+logging:
+  level:
+    #root : debug
+    com.zs.backend: warn
+  file:
+    # 只写 name ,表示在当前项目目录下生成该名字的日志文件，也可以制定路径。
+    # 只写 path，表示在指定目录下生成文件夹，文件名默认为 spring.log
+    # 两个都写，只有 name 生效
+    name: backend.log
+    path: var/log/backend.log

@@ -1,0 +1,25 @@
+server:
+  port: 8099
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3309/mall_tiny?useUnicode=true&characterEncoding=utf-8&useSSL=true&&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.example.entity
+
+logging:
+  level:
+    # 日志级别：info < debug < trace
+    # info 不打印 sql, debug 打印 sql 但是不打印结果集，trace 打印包含结果集的 sql
+    com.zs.backend: trace
+  file:
+    # 只写 name ,表示在当前项目目录下生成该名字的日志文件，也可以制定路径。
+    # 只写 path，表示在指定目录下生成文件夹，文件名默认为 spring.log
+    # 两个都写，只有 name 生效
+    name: backend.log
+    #path: E:/backend2.log
+    path: log/backend.log
