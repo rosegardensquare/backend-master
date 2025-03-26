@@ -1,6 +1,6 @@
 package com.zs.backend.netdemo;
 
-import com.zs.backend.test.net.common.statement.util.PropUtil;
+import com.zs.backend.net.common.statement.util.PropUtil;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
